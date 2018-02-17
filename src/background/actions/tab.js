@@ -1,9 +1,9 @@
-function onBeforeSendHeaders(url) {
+const onBeforeSendHeaders = (url) => {
   browser.webRequest.onBeforeSendHeaders.addListener(
     (request) => {
       let referer = null;
       for (let header of request.requestHeaders) {
-        if (header.name.toLowerCase() === "referer" && header.value) {
+        if (header.name.toLowerCase() === 'referer' && header.value) {
           referer = header;
           break;
         }
@@ -12,10 +12,10 @@ function onBeforeSendHeaders(url) {
 
       return { requestHeaders: request.requestHeaders };
     },
-    { urls: ["<all_urls>"] },
-    ["blocking", "requestHeaders"]
+    { urls: ['<all_urls>']},
+    ['blocking', 'requestHeaders']
   );
-}
+};
 
 const openNewTab = (url, tab) => {
   onBeforeSendHeaders(tab.url);
