@@ -16,3 +16,4 @@ script:
   - npm run build
   - npm run ambassador:build
   - node e2e/web-server & npm run test:e2e
+ 
