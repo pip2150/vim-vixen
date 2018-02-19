@@ -31,7 +31,10 @@
     "sessions",
     "storage",
     "tabs",
-    "clipboardRead"
+    "clipboardRead",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
   ],
   "web_accessible_resources": [
     "build/console.html",
